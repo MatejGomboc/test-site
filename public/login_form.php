@@ -1,16 +1,16 @@
 <?php
 
 switch(session_status()) {
-    case PHP_SESSION_DISABLED:
-        header("Location: sessions_disabled.php");
-        break;
-    case PHP_SESSION_NONE:
-        break;
-    case PHP_SESSION_ACTIVE:
-        header("Location: wellcome_back.php");
-        break;
-    default:
-        exit(1);
+case PHP_SESSION_DISABLED:
+    header("Location: sessions_disabled.php");
+    break;
+case PHP_SESSION_NONE:
+    break;
+case PHP_SESSION_ACTIVE:
+    header("Location: wellcome_back.php");
+    break;
+default:
+    exit(1);
 }
 
 ?>
@@ -20,8 +20,8 @@ switch(session_status()) {
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Test login.">
-    <meta name="keywords" content="Test login, Matej Gomboc">
+	<meta name="description" content="Test site.">
+    <meta name="keywords" content="Test site, Matej Gomboc">
     <meta name="author" content="Matej Gomboc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="copyright" content="Copyright (c) 2020 Matej Gomboc, all rights reserved.">
@@ -29,7 +29,7 @@ switch(session_status()) {
     <link rel="icon" href="light_bulbs.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css" type="text/css"/>
 
-	<title>Test login</title>
+	<title>Test site</title>
 </head>
 
 <body>
@@ -40,7 +40,7 @@ switch(session_status()) {
     <main>
         <fieldset class="login_form">
             <legend class="login_form">Enter your credentials:</legend>
-            <form action="/login_session_create.php" method="post">
+            <form action="login_session_create.php" method="post">
                 <table class="login_form">
                     <tr>
                         <td class="login_form"><label for="username">Username:</label></td>
