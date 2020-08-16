@@ -33,9 +33,9 @@ footer {
 	color: White;
 }
 
-fieldset.login {
+fieldset.login_form {
 	margin: auto;
-	padding: 20px;
+	padding: 10px;
 	width: max-content;
 	height: max-content;
 	border-radius: 20px;
@@ -43,8 +43,21 @@ fieldset.login {
 	border-color: white;
 }
 
-fieldset.login legend {
+legend.login_form {
 	width: auto;
     margin-left: auto;
 	margin-right: auto;
+	font-weight: bold;
+}
+
+table.login_form {
+	border-spacing: 10px;
+}
+
+input[type="submit"].login_form {
+	margin: 10px;
+}
+
+td.login_form {
+	text-align: left;
 }
