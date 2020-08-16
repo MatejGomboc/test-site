@@ -37,7 +37,9 @@ switch(session_status()) {
 		<h1>Log in</h1>
 	</header>
 
-	<p>Please login.</p>
+    <main>
+	    <p>Please login.</p>
+    </main>
 
 	<footer>
 		<p>Copyright (c) 2020 Matej Gomboc, all rights reserved.</p>

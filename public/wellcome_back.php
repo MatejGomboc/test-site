@@ -37,7 +37,9 @@ switch(session_status()) {
 		<h1>Wellcome back</h1>
 	</header>
 
-	<p>Wellcome back.</p>
+    <main>
+	    <p>Wellcome back.</p>
+    </main>
 
 	<footer>
 		<p>Copyright (c) 2020 Matej Gomboc, all rights reserved.</p>
