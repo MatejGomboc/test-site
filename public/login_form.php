@@ -38,7 +38,18 @@ switch(session_status()) {
 	</header>
 
     <main>
-	    <p>Please login.</p>
+        <fieldset class="login">
+            <legend><b>Enter your credentials:</b></legend>
+            <form action="/action_page.php" method="post">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname">
+                <br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form> 
+        </fieldset>
     </main>
 
 	<footer>

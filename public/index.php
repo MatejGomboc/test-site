@@ -1,8 +1,8 @@
 <?php
 
-header("Location: sessions_disabled.php");
+//header("Location: sessions_disabled.php");
 
-/*switch(session_status()) {
+switch(session_status()) {
     case PHP_SESSION_DISABLED:
         header("Location: sessions_disabled.php");
         break;
@@ -14,6 +14,6 @@ header("Location: sessions_disabled.php");
         break;
     default:
         exit(1);
-}*/
+}
 
 ?>

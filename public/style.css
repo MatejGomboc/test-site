@@ -14,11 +14,13 @@ header {
 }
 
 main {
-	height: auto;
+	position: fixed;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0;
 	width: 100%;
 	text-align: center;
-	background-color: RoyalBlue;
-	color: White;
 }
 
 footer {
@@ -29,4 +31,20 @@ footer {
 	text-align: center;
 	background-color: RoyalBlue;
 	color: White;
+}
+
+fieldset.login {
+	margin: auto;
+	padding: 20px;
+	width: max-content;
+	height: max-content;
+	border-radius: 20px;
+	border-style: solid;
+	border-color: white;
+}
+
+fieldset.login legend {
+	width: auto;
+    margin-left: auto;
+	margin-right: auto;
 }
