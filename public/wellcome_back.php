@@ -1,10 +1,6 @@
 <?php
 
-session_start([
-    "name" => "PHPSESSIDLOGIN",
-    "save_path" => "../private/sessions",
-    "use_strict_mode" => true
-]);
+session_start();
 
 if (empty($_SESSION["username"])) {
     header("Location: login_form.php");
