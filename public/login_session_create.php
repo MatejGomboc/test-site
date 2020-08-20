@@ -1,22 +1,17 @@
 <?php
 
-switch(session_status()) {
-case PHP_SESSION_DISABLED:
-    header("Location: sessions_disabled.php");
-    break;
-case PHP_SESSION_NONE:
-    // TODO !!! check credentials
-    if (!session_start()) {
-        header("Location: sessions_disabled.php");
-        break;    
-    }
+session_start([
+    "name" => "PHPSESSIDLOGIN",
+    "save_path" => "../private/sessions",
+    "use_strict_mode" => true
+]);
+
+if (!empty($_SESSION["username"])) {
     header("Location: wellcome_back.php");
-    break;
-case PHP_SESSION_ACTIVE:
-    header("Location: wellcome_back.php");
-    break;
-default:
-    exit(1);
+    return;
 }
+
+$_SESSION["username"] = $_POST["username"];
+header("Location: wellcome_back.php");
 
 ?>
