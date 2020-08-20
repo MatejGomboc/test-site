@@ -32,7 +32,11 @@ if (empty($_SESSION["username"])) {
 	</header>
 
     <main>
-	    <p>Wellcome back.</p>
+        <fieldset class="login_form">
+            <form action="login_session_destroy.php" method="get">
+                <input type="submit" value="Log out" class="login_form">
+            </form> 
+        </fieldset>
     </main>
 
 	<footer>

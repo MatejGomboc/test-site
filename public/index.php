@@ -3,7 +3,7 @@
 session_start();
 
 if (!empty($_SESSION["username"])) {
-    header("Location: wellcome_back.php");
+    header("Location: login_wellcome_back.php");
     return;
 }
 
