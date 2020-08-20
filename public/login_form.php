@@ -38,11 +38,11 @@ if (!empty($_SESSION["username"])) {
                 <table class="login_form">
                     <tr>
                         <td class="login_form"><label for="username">Username:</label></td>
-                        <td class="login_form"><input type="text" name="username"></td>
+                        <td class="login_form"><input type="text" name="username" required></td>
                     </tr>
                     <tr>
                         <td class="login_form"><label for="password">Password:</label></td>
-                        <td class="login_form"><input type="password" name="password"></td>
+                        <td class="login_form"><input type="password" name="password" required></td>
                     </tr>
                 </table>
                 <input type="submit" value="Submit" class="login_form">
