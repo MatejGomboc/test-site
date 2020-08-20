@@ -9,19 +9,20 @@ if (!empty($_SESSION["userid"])) {
 
 $db = new SQLite3("../private/credentials.db", SQLITE3_OPEN_READONLY);
 
-$statement = $db->prepare("SELECT id FROM table WHERE username = :username AND password = :password;");
+$statement = $db->prepare("SELECT id FROM users WHERE username = :username AND password = :password");
 $statement->bindValue(":username", $_POST["username"]);
 $statement->bindValue(":password", $_POST["password"]);
-$result = $statement->execute();
+$results = $statement->execute();
 
-$db->close();
-
-if (!$result->numColumns() || ($result->columnType(0) == SQLITE3_NULL)) {
+if ((!$results->numColumns()) || ($results->columnType(0) == SQLITE3_NULL)) {
     header("Location: login_form.php");
     return;    
 }
 
-$_SESSION["userid"] = $result->fetchArray(SQLITE3_ASSOC)["id"];
+$_SESSION["userid"] = $results->fetchArray(SQLITE3_ASSOC)["id"];
+
+$db->close();
+
 header("Location: login_wellcome_back.php");
 
 ?>

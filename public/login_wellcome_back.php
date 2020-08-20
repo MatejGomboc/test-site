@@ -2,7 +2,7 @@
 
 session_start();
 
-if (empty($_SESSION["username"])) {
+if (empty($_SESSION["userid"])) {
     header("Location: login_form.php");
     return;
 }
