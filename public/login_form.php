@@ -39,14 +39,14 @@ if (!empty($_SESSION["username"])) {
                     <tr>
                         <td class="login_form"><label for="username">Username:</label></td>
                         <td class="login_form"><input type="text" name="username" required
-                            autocomplete="on" pattern="^[A-Za-z][A-Za-z0-9]{5,}"
+                            autocomplete="on" pattern="^[A-Za-z][A-Za-z0-9]{4,}"
                             title="Must contain only numbers and uppercase and lowercase letters, at least 5 or more characters, and the first character must be a letter.">
                             </td>
                     </tr>
                     <tr>
                         <td class="login_form"><label for="password">Password:</label></td>
                         <td class="login_form"><input type="password" name="password" required
-                            pattern="^(?=[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[\u0021\u0023\u0024\u0025\u0027\u002A\u002B\u002C\u002D\u002E\u003A\u003B\u003F\u0040\u005F])[0-9a-zA-Z\u0021\u0023\u0024\u0025\u0027\u002A\u002B\u002C\u002D\u002E\u003A\u003B\u003F\u0040\u005F]{8,}$"
+                            pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[\u0021\u0023\u0024\u0025\u0027\u002A\u002B\u002C\u002D\u002E\u003A\u003B\u003F\u0040\u005F])[0-9a-zA-Z\u0021\u0023\u0024\u0025\u0027\u002A\u002B\u002C\u002D\u002E\u003A\u003B\u003F\u0040\u005F]{7,}$"
                             title="Must contain at least one number, one special character (.,:;!?'@#$*%+-_) and one uppercase and lowercase letter, and a combination of at least 8 or more of these characters.">
                             </td>
                     </tr>
