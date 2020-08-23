@@ -13,8 +13,8 @@ if (empty($_SESSION["userid"])) {
 <html lang="en-GB">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Test site.">
+    <meta charset="UTF-8">
+    <meta name="description" content="Test site.">
     <meta name="keywords" content="Test site, Matej Gomboc">
     <meta name="author" content="Matej Gomboc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,13 +23,13 @@ if (empty($_SESSION["userid"])) {
     <link rel="icon" href="light_bulbs.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css" type="text/css"/>
 
-	<title>Test site</title>
+    <title>Test site</title>
 </head>
 
 <body>
-	<header>
-		<h1>Wellcome back</h1>
-	</header>
+    <header>
+        <h1>Wellcome back</h1>
+    </header>
 
     <main>
         <fieldset class="login_form">
@@ -39,9 +39,9 @@ if (empty($_SESSION["userid"])) {
         </fieldset>
     </main>
 
-	<footer>
-		<p>Copyright (c) 2020 Matej Gomboc, all rights reserved.</p>
-	</footer>
+    <footer>
+        <p>Copyright (c) 2020 Matej Gomboc, all rights reserved.</p>
+    </footer>
 </body>
 
 </html>
