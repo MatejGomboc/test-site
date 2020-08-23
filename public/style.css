@@ -1,3 +1,5 @@
+/* global */
+
 body {
 	background-color: Black;
 	color: White;
@@ -8,6 +10,7 @@ header {
 	left: 0;
 	top: 0;
 	width: 100%;
+	height: max-content;
 	text-align: center;
 	background-color: RoyalBlue;
 	color: White;
@@ -20,6 +23,7 @@ main {
 	transform: translateY(-50%);
 	left: 0;
 	width: 100%;
+	height: max-content;
 	text-align: center;
 }
 
@@ -28,13 +32,18 @@ footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	height: max-content;
 	text-align: center;
 	background-color: RoyalBlue;
 	color: White;
 }
 
+/* login form */
+
 fieldset.login_form {
 	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	padding: 10px;
 	width: max-content;
 	height: max-content;
@@ -60,4 +69,32 @@ input[type="submit"].login_form {
 
 td.login_form {
 	text-align: left;
+}
+
+/* error message box */
+
+section.error_message_box {
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	width: max-content;
+	height: max-content;
+	border-radius: 20px;
+	border-style: hidden;
+	background-color: red;
+	color: white;
+}
+
+p.error_message_box {
+	margin: 10px;
+}
+
+button.error_message_box {
+	background-color: orange;
+	color: white;
+	border-radius: 20px;
+	border-style: hidden;
+	font-size: 20px;
+	font-weight: bolder;
 }

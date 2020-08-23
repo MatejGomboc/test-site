@@ -23,7 +23,13 @@ if (!empty($_SESSION["userid"])) {
     <link rel="icon" href="light_bulbs.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css" type="text/css"/>
 
-	<title>Test site</title>
+    <title>Test site</title>
+
+    <script>
+        function closeErrorMessageBox() {
+            document.getElementById("error_box").style.display = "none";
+        }
+    </script>
 </head>
 
 <body>
@@ -32,12 +38,13 @@ if (!empty($_SESSION["userid"])) {
 	</header>
 
     <main>
-        <?php
-            if ($_SESSION["login_failed"]) {
-                echo("<p>Login failed !</p>");
-            }
-            $_SESSION = array();
-        ?>
+        <section id="error_box" class="error_message_box">
+            <p class="error_message_box">
+                Login failed !
+                <button type="button" onclick="closeErrorMessageBox()" class="error_message_box">&times;</button>
+            </p>
+        </section>
+
         <fieldset class="login_form">
             <legend class="login_form">Enter your credentials:</legend>
             <form action="login_session_create.php" method="post">
@@ -52,7 +59,7 @@ if (!empty($_SESSION["userid"])) {
                     </tr>
                 </table>
                 <input type="submit" value="Submit" class="login_form">
-            </form> 
+            </form>
         </fieldset>
     </main>
 

@@ -35,7 +35,7 @@ if (empty($_SESSION["userid"])) {
         <fieldset class="login_form">
             <form action="login_session_destroy.php" method="get">
                 <input type="submit" value="Log out" class="login_form">
-            </form> 
+            </form>
         </fieldset>
     </main>
 
