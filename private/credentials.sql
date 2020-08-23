@@ -1,5 +1,7 @@
 CREATE TABLE users(
-    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     username TEXT NOT NULL,
-    password TEXT NOT NULL
+    password TEXT NOT NULL,
+    UNIQUE(username)
 );
+
+INSERT INTO users (username, password) VALUES ("admin", "Siol1000?");
