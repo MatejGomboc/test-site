@@ -13,8 +13,8 @@ if (!empty($_SESSION["userid"])) {
 <html lang="en-GB">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Test site.">
+    <meta charset="UTF-8">
+    <meta name="description" content="Test site.">
     <meta name="keywords" content="Test site, Matej Gomboc">
     <meta name="author" content="Matej Gomboc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,9 +35,9 @@ if (!empty($_SESSION["userid"])) {
 </head>
 
 <body>
-	<header>
-		<h1>Log in</h1>
-	</header>
+    <header>
+        <h1>Log in</h1>
+    </header>
 
     <main>
         <?php if ($_SESSION["login_failed"]) { ?>
@@ -67,9 +67,9 @@ if (!empty($_SESSION["userid"])) {
         </fieldset>
     </main>
 
-	<footer>
-		<p>Copyright (c) 2020 Matej Gomboc, all rights reserved.</p>
-	</footer>
+    <footer>
+        <p>Copyright (c) 2020 Matej Gomboc, all rights reserved.</p>
+    </footer>
 </body>
 
 </html>
