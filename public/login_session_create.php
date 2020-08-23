@@ -14,24 +14,9 @@ $statement->bindValue(":username", $_POST["username"], SQLITE3_TEXT);
 $statement->bindValue(":password", $_POST["password"], SQLITE3_TEXT);
 $results = $statement->execute();
 
-if ($results == NULL) {
-    header("Location: login_form.php");
-    return;
-}
-
-$numColumns = $results->numColumns();
-
-if ($results->numColumns() == 0) {
-    header("Location: login_form.php");
-    return;
-}
-
 $entry = $results->fetchArray(SQLITE3_ASSOC);
 
-$columnName = $results->columnName(0);
-$columnType = $results->columnType(0);
-
-if ($results->columnType(0) != SQLITE3_INTEGER) {
+if ($entry == false) {
     header("Location: login_form.php");
     return;
 }
