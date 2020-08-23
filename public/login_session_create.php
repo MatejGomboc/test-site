@@ -17,6 +17,7 @@ $results = $statement->execute();
 $entry = $results->fetchArray(SQLITE3_ASSOC);
 
 if ($entry == false) {
+    $_SESSION["login_failed"] = true;
     header("Location: login_form.php");
     return;
 }

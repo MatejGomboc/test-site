@@ -4,4 +4,4 @@ CREATE TABLE users(
     UNIQUE(username)
 );
 
-INSERT INTO users (username, password) VALUES ("admin", "Siol1000?");
+INSERT INTO users (username, password) VALUES ("test", "test");
