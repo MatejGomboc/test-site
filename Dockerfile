@@ -10,7 +10,6 @@ COPY public/* /var/www/test-site/public/
 COPY private/credentials.sql /var/www/test-site/private/
 
 RUN a2dissite 000-default.conf && \
-    rm -r /var/www/html && \
     sqlite3 /var/www/test-site/private/credentials.db < /var/www/test-site/private/credentials.sql && \
     rm /var/www/test-site/private/credentials.sql && \
     a2ensite test-site.conf
