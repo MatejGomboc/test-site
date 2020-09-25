@@ -5,15 +5,7 @@
             "name": "Listen for XDebug",
             "type": "php",
             "request": "launch",
-            "port": 9000,
-            "log": true,
-            "externalConsole": false,
-            "pathMappings": {
-                "/var/www/site": "${workspaceRoot}/site",
-            },
-            "ignore": [
-                "**/vendor/**/*.php"
-            ]
+            "port": 9000
         }
     ]
 }
