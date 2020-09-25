@@ -7,9 +7,15 @@ if (!empty($_SESSION["userid"])) {
     return;
 }
 
-$db = new mysqli("localhost", "root", "rootpwd", "credentials");
+$db = new mysqli("localhost", "admin", "siol1000", "credentials");
 
-$result = $mysqli->query("SELECT rowid FROM users WHERE " . username . " AND " . password);
+$result = $db->query("SELECT rowid FROM users WHERE username = '" . $_POST["username"] . "' AND password = '" . $_POST["password"] . "'");
+
+if ($result == false) {
+    $_SESSION["login_failed"] = true;
+    header("Location: login_form.php");
+    return;
+}
 
 $entry = $result->fetch_assoc();
 
