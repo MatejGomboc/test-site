@@ -1,12 +1,10 @@
 <?php
-
 session_start();
 
 if (!empty($_SESSION["userid"])) {
     header("Location: login_wellcome_back.php");
     return;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +23,7 @@ if (!empty($_SESSION["userid"])) {
 
     <title>Test site</title>
 
-    <?php if ($_SESSION["login_failed"]) { ?>
+    <?php if (!empty($_SESSION["login_failed"])) { ?>
     <script>
         function closeErrorMessageBox() {
             document.getElementById("error_box").style.display = "none";
@@ -40,7 +38,7 @@ if (!empty($_SESSION["userid"])) {
     </header>
 
     <main>
-        <?php if ($_SESSION["login_failed"]) { ?>
+        <?php if (!empty($_SESSION["login_failed"])) { ?>
         <section id="error_box" class="error_message_box">
             <p class="error_message_box">
                 Login failed !
