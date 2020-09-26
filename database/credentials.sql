@@ -1,5 +1,7 @@
 CREATE OR REPLACE DATABASE credentials;
 
+GRANT ALL PRIVILEGES ON credentials.* To 'testuser'@'localhost' IDENTIFIED BY 'testpwd';
+
 USE credentials;
 
 CREATE OR REPLACE TABLE users (
@@ -11,4 +13,3 @@ CREATE OR REPLACE TABLE users (
 );
 
 INSERT INTO users (username, password) VALUES ("test", "test");
-

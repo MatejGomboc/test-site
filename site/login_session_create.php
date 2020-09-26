@@ -7,7 +7,7 @@ if (!empty($_SESSION["userid"])) {
     return;
 }
 
-$db = new mysqli("localhost", "admin", "siol1000", "credentials");
+$db = new mysqli("localhost", "testuser", "testpwd", "credentials");
 
 $result = $db->query("SELECT rowid FROM users WHERE username = '" . $_POST["username"] . "' AND password = '" . $_POST["password"] . "'");
 
