@@ -1,0 +1,11 @@
+version: "3"
+services:
+    nginx:
+        image: nginx:latest
+        ports:
+            - 80:80
+        volumes:
+            - ./nginx/conf/:/etc/nginx/:ro
+            - ./nginx/logrotate:/etc/logrotate.d/nginx:ro
+            - ./nginx/logs/:/var/log/nginx/:rw
+            - ./site/:/usr/share/nginx/:ro
